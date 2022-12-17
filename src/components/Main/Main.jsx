@@ -4,17 +4,15 @@ import { Card, CardHeader, CardContent, Typography, Grid, Divider } from '@mater
 import useStyles from './styles';
 import Form from './Form/Form';
 import List from './List/List';
-import useTransactions from '../../useTransaction';
 
 const Main = () => {
   const classes = useStyles()
   
-  const { total } = useTransactions()
   return (
     <Card className={classes.root}>
         <CardHeader title={"Expense Tracker"} subheader="Powered by Speechly" />
         <CardContent>  
-          <Typography align='center' variant='h5'>Total Balance {total}</Typography>
+          <Typography align='center' variant='h5'>Total Balance $100</Typography>
           <Typography variant='subtitle1' style={{ lineHeight: '1.5em', marginTop: '20px' }}>
             {/* InfoCard */}
             Try saying: Add income for $100 in Category Salary for Monday ...
